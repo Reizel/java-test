@@ -1,12 +1,13 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class InteructRunner{
 	public static void main(String[] args){
+		System.out.println("Calculaor...");
 		Scanner scn = new Scanner(System.in);
-		try{
+		try {
 			Calculator calc = new Calculator();
 			String exit = "no";
-			while(){
+			while(!exit.equals("yes")) {
 				System.out.println("¬ведите первое число");
 				String firs = scn.next();
 				System.out.println("¬ведите второе число");
@@ -17,7 +18,9 @@ public class InteructRunner{
 				System.out.println("Exit : yes/no ");
 				exit = scn.next();
 			}
-		}finaly{
+		}catch (Exception e){
+			e.printStackTrace();
+		} finally {
 			scn.close();
 		}	
 	}

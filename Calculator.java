@@ -4,7 +4,7 @@ public class Calculator{
 	
 	public void add(int... args){
 		for(Integer arg:args){
-			this.result+=params;
+			this.result+=arg;
 		}
 	}
 	public int getResult(){

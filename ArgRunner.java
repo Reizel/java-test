@@ -1,10 +1,13 @@
 public class Calculate{
 	
-	public static void main(String[] arg){
+	public static void main(String[] args){
 		System.out.print("Calculate...");
-		int first = Integer.valueOf(arg[0]);
-		int second = Integer.valueOf(arg[0]);;
-		int summ = first + second;
+		Calculator calc = new Calculator();
+		for(int i=0; i<args.lenght; i++){
+			calc.add(Integer.valueOf(args[i]));
+		}
+		int summ = calc.getResult();
 		System.out.println("Summ " + summ);
+		calc.cleanResult();
 	}
 }
